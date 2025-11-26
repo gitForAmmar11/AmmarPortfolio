@@ -671,21 +671,20 @@ Across all my roles developer, mentor, organizer, ambassador, and editor, I stri
                 </div>
                 
                 <div class="md:w-1/2">
+                    <div id="formPopup" 
+     class="hidden mb-4 p-4 rounded-lg text-center font-semibold transition-all">
+</div>
 
-    <!-- ONLY ONE POPUP -->
-    <div id="formPopup"
-         class="hidden mb-4 p-4 rounded-lg text-center font-semibold transition-all duration-300">
-    </div>
+                    <form id="contactForm"
+      action="https://formsubmit.co/mdammarhossain11@gmail.com"
+      method="POST"
+      class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-sm">
 
-    <!-- ONLY ONE FORM -->
-    <form id="contactForm"
-          action="https://formsubmit.co/mdammarhossain11@gmail.com"
-          method="POST"
-          class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-sm">
+    <!-- FormSubmit Required Hidden Inputs -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Message From Portfolio">
 
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="New Message From Portfolio">
-        <input type="hidden" name="_next" value="https://gitforammar11.github.io/AmmarPortfolio/">
+    <input type="hidden" name="_next" value="https://gitForAmmar11.github.io/AmmarPortfolio/">
 
     <!-- Popup Message -->
     <div id="formPopup" 
@@ -860,12 +859,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (!emailPattern.test(email)) {
-            showPopup("❌ Invalid email address!", "bg-yellow-500 text-black");
+            showPopup("Invalid email address!", "bg-yellow-500 text-black");
             return;
         }
 
         // 🚀 All good — NOW submit the form to FormSubmit
-        showPopup("✅ Message sent successfully!", "bg-green-500 text-white");
+        showPopup("Message sent successfully!", "bg-green-500 text-white");
 
         setTimeout(() => {
             form.submit(); // send email to Gmail
@@ -883,9 +882,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 </script>
-
-
-
 
 </body>
 
